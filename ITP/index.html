@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mics | Creative Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <style>
+    :root {
+      --dark: #1a1a1a;
+      --light: #f5f5f5;
+      --accent: #ff4d4d;
+      --gray: #888;
+      --spacing: 2rem;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Space Mono', monospace;
+      background-color: var(--light);
+      color: var(--dark);
+      line-height: 1.6;
+    }
+
+    @font-face {
+      font-family: 'Space Mono';
+      src: url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+    }
+
+    header {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 0 var(--spacing);
+      border-bottom: 1px solid var(--dark);
+      position: relative;
+    }
+
+    .menu-toggle {
+      position: fixed;
+      top: var(--spacing);
+      right: var(--spacing);
+      z-index: 100;
+      cursor: pointer;
+      font-size: 1.5rem;
+    }
+
+    nav {
+      position: fixed;
+      top: 0;
+      right: -300px;
+      width: 300px;
+      height: 100vh;
+      background-color: var(--dark);
+      transition: right 0.3s ease;
+      z-index: 90;
+      padding: 6rem 2rem;
+    }
+
+    nav.active {
+      right: 0;
+    }
+
+    .nav-links {
+      list-style: none;
+    }
+
+    .nav-links li {
+      margin-bottom: 1.5rem;
+    }
+
+    .nav-links a {
+      color: var(--light);
+      text-decoration: none;
+      font-size: 1.2rem;
+      transition: color 0.3s;
+      display: block;
+      padding: 0.5rem 0;
+      border-bottom: 1px solid transparent;
+    }
+
+    .nav-links a:hover {
+      color: var(--accent);
+      border-bottom: 1px solid var(--accent);
+    }
+
+    h1 {
+      font-size: clamp(2rem, 8vw, 5rem);
+      line-height: 1;
+      margin-bottom: 1rem;
+    }
+
+    .tagline {
+      font-size: 1.2rem;
+      max-width: 600px;
+      opacity: 0.8;
+      margin-bottom: 2rem;
+    }
+
+    .scroll-down {
+      position: absolute;
+      bottom: var(--spacing);
+      left: 50%;
+      transform: translateX(-50%);
+      animation: bounce 2s infinite;
+    }
+
+    @keyframes bounce {
+      0%, 20%, 50%, 80%, 100% {transform: translateY(0) translateX(-50%);}
+      40% {transform: translateY(-20px) translateX(-50%);}
+      60% {transform: translateY(-10px) translateX(-50%);}
+    }
+
+    section {
+      padding: 8rem var(--spacing);
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    section h2 {
+      font-size: 2.5rem;
+      margin-bottom: 3rem;
+      position: relative;
+      display: inline-block;
+    }
+
+    section h2::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+      width: 50%;
+      height: 3px;
+      background-color: var(--accent);
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+    }
+
+    .project-card {
+      background-color: var(--dark);
+      color: var(--light);
+      padding: 2rem;
+      text-decoration: none;
+      border-radius: 10px;
+      font-size: 1.1rem;
+      transition: background-color 0.3s, transform 0.2s;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    }
+
+    .project-card:hover {
+      background-color: var(--accent);
+      transform: translateY(-5px);
+    }
+
+    footer {
+      text-align: center;
+      padding: 3rem var(--spacing);
+      background-color: var(--dark);
+      color: var(--light);
+    }
+
+    .social-links {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-top: 1rem;
+    }
+
+    .social-links a {
+      color: var(--light);
+      font-size: 1.5rem;
+      transition: color 0.3s;
+    }
+
+    .social-links a:hover {
+      color: var(--accent);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="menu-toggle" id="menuToggle">
+    <i class="fas fa-bars"></i>
+  </div>
+
+  <nav id="mainNav">
+    <ul class="nav-links">
+      <li><a href="#lectures">Lectures</a></li>
+      <li><a href="#prelims">Prelims</a></li>
+      <li><a href="#midterms">Midterms</a></li>
+      <li><a href="#finals">Finals</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <header>
+    <h1>Mico.</h1>
+    <p class="tagline">Digital creator & problem solver</p>
+    <div class="scroll-down">
+      <i class="fas fa-chevron-down"></i>
+    </div>
+  </header>
+
+<section id="lectures">
+  <h2>Lectures</h2>
+  <div class="projects">
+    <a href="CIP1101_PRELIM_ACTIVITY_1_DIAZ_DANIEL.pdf" class="project-card">Lect1 – Intro to Web Design</a>
+    <a href="Lect2.html" class="project-card">Lect2 – HTML Structures</a>
+    <a href="Lect3.html" class="project-card">Lect3 – Tables</a>
+    
+    <div class="project-card" style="opacity: 0.6; cursor: not-allowed;" title="Coming soon">Lect4 – Lists, Links & Images</div>
+    <div class="project-card" style="opacity: 0.6; cursor: not-allowed;" title="Coming soon">Lect5 – CSS</div>
+    <div class="project-card" style="opacity: 0.6; cursor: not-allowed;" title="Coming soon">Lect6 – Forms</div>
+
+    <a href="Lect7.html" class="project-card">Lect7 – Bootstrap</a>
+  </div>
+</section>
+
+  <section id="prelims">
+    <h2>Prelims</h2>
+    <div class="projects">
+      <a href="prelim_activity2.html" class="project-card">Activity 2 – Table-Image Gallery</a>
+      <a href="prelim_activity3.html" class="project-card">Activity 3 – Web Developer’s Page</a>
+      <a href="prelim_quiz1.html" class="project-card">Quiz 1 – Table with Images</a>
+      <a href="NotVirus/index.html" class="project-card">Exam – Furniture Sale</a>
+    </div>
+  </section>
+
+  <section id="midterms">
+    <h2>Midterms</h2>
+    <div class="projects">
+      <a href="midterm_activity2.html" class="project-card">Activity 2 – Table of Contents</a>
+      <a href="midterm_activity3.html" class="project-card">Activity 3 – Image Mapping</a>
+      <a href="midterm_activity4.html" class="project-card">Activity 4 – Admission Form</a>
+      <a href="DPINTEG/DIAZ-PESTANAS.html" class="project-card">Exam – Informative Page</a>
+    </div>
+  </section>
+
+  <section id="finals">
+    <h2>Finals</h2>
+    <div class="projects">
+      <a href="https://finals-act2.tiiny.site" class="project-card">Final Activity – Admin Page</a>
+    </div>
+  </section>
+
+  <section id="contact">
+    
+    
+  </section>
+
+  <footer>
+    <p>© 2023 micowo. All rights reserved.</p>
+    <div class="social-links">
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-linkedin"></i></a>
+      <a href="#"><i class="fab fa-github"></i></a>
+    </div>
+  </footer>
+
+  <script>
+    const menuToggle = document.getElementById('menuToggle');
+    const mainNav = document.getElementById('mainNav');
+
+    menuToggle.addEventListener('click', () => {
+      mainNav.classList.toggle('active');
+    });
+
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', () => {
+        mainNav.classList.remove('active');
+      });
+    });
+  </script>
+
+</body>
+</html>

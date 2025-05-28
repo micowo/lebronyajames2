@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Prelim Hands-On Quiz 1</title>
+  <style>
+    body {
+      background-image: url('https://upload.wikimedia.org/wikipedia/commons/7/70/NAIA_terminal_2_from_runway.jpg');
+      background-size: cover;
+      background-position: center;
+      font-family: 'Poppins', sans-serif;
+      color: #333;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-bottom: 20px;
+      padding: 10px 20px;
+      background-color: #2a2a2a;
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+
+    .back-link:hover {
+      background-color: #ff4d4d;
+    }
+
+    .container {
+      background-color: rgba(255, 255, 255, 0.95);
+      padding: 30px;
+      max-width: 1000px;
+      margin: 40px auto;
+      display: flex;
+      gap: 30px;
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    }
+
+    .content {
+      flex: 1;
+      animation: fadeIn 1.5s ease-in;
+    }
+
+    .content h1 {
+      font-size: 36px;
+      font-weight: bold;
+      color: #2a2a2a;
+      margin-bottom: 10px;
+    }
+
+    .content h2 {
+      font-size: 28px;
+      color: #555;
+      margin-bottom: 20px;
+    }
+
+    .content p {
+      margin-bottom: 20px;
+      line-height: 1.8;
+      text-align: justify;
+    }
+
+    .image-container {
+      flex: 1;
+      height: 400px;
+      overflow-y: scroll;
+      scroll-snap-type: y mandatory;
+      border-radius: 20px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .image-container img {
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+      border-radius: 20px;
+      scroll-snap-align: start;
+      transition: transform 0.5s ease;
+    }
+
+    .image-container img:hover {
+      transform: scale(1.05);
+    }
+
+    .table-section {
+      margin-top: 30px;
+      animation: slideIn 1.5s ease-out;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    th, td {
+      border: 1px solid #ddd;
+      padding: 15px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #f0f0f0;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes slideIn {
+      from { opacity: 0; transform: translateX(-20px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+        padding: 20px;
+      }
+      .image-container {
+        height: 300px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <a href="index.html" class="back-link">← Back to Portfolio</a>
+
+  <div class="table-section">
+    <table>
+      <tr>
+        <th>Name:</th>
+        <td>DIAZ, FRANCIOUS MICO M.</td>
+        <th>Topic:</th>
+        <td>Introduction to HTML5</td>
+      </tr>
+      <tr>
+        <th>Activity No.:</th>
+        <td>Hands-on Quiz 1</td>
+        <th>Date:</th>
+        <td>07/21/2025</td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="container">
+    <div class="content">
+      <h1>My Favorite Place: NAIA Terminal 2</h1>
+      <h2>Gateway of the Philippines</h2>
+      <p>NAIA Terminal 2, also known as the Centennial Terminal, is located in Pasay City, Metro Manila, Philippines. It serves as a major hub for domestic and international flights, providing convenient access to travelers from all over the world.</p>
+      <p>Opened in 1999, NAIA Terminal 2 was built to commemorate the centennial celebration of Philippine independence. It is owned and operated by the Manila International Airport Authority (MIAA) and primarily serves as the hub for Philippine Airlines.</p>
+      <p>NAIA Terminal 2 is my favorite place because there is something incredibly calming about its atmosphere, especially during the late hours of the night. The soft hum of the few remaining flights, the gentle glow of the terminal lights, and the quiet anticipation of new journeys create an aura that I find truly peaceful. Walking through the nearly empty terminal at midnight brings a sense of serenity and reflection, reminding me of the possibilities that travel holds. The stillness of the airport at these hours brings me comfort, making it a place where I feel both excited and at ease.</p>
+    </div>
+    <div class="image-container">
+      <img src="https://ik.imagekit.io/tvlk/blog/2018/04/naia-2-750x400.png?tr=q-70,c-at_max,w-500,h-300,dpr-2" alt="NAIA Terminal 2 View">
+      <img src="https://cdn.manilastandard.net/wp-content/uploads/2022/01/naia.jpg" alt="NAIA Terminal 2 Interior">
+    </div>
+  </div>
+
+</body>
+</html>
